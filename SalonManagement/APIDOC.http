@@ -1,0 +1,53 @@
+###
+
+GET http://127.0.0.1:8000/api/stylists/
+Accept: application/json
+
+###
+POST http://127.0.0.1:8000/api/stylists/
+Content-Type: application/json
+
+{
+    "stylist_name": "Sarah",
+    "specialization": "Hair Styling",
+    "experience": 5,
+    "salon_branch": "Downtown",
+    "service_fee": 500
+}
+
+###
+GET http://127.0.0.1:8000/api/stylists/2/
+Accept: application/json
+
+###
+PUT http://127.0.0.1:8000/api/stylists/1/
+Content-Type: application/json
+
+{
+    "id": 1,
+    "stylist_name": "Sarah Jenkins",
+    "specialization": "Senior Hair Stylist",
+    "experience": 6,
+    "salon_branch": "Downtown",
+    "service_fee": 600,
+    "available": true
+}
+
+###
+DELETE http://127.0.0.1:8000/api/stylists/3/
+
+###
+GET http://127.0.0.1:8000/api/bookings/
+Accept: application/json
+
+###
+POST http://127.0.0.1:8000/api/bookings/
+Content-Type: application/json
+
+{
+    "client_name": "John Doe",
+    "phone": "7652712",
+    "stylist_id": 1,
+    "booking_date": "2026-11-01",
+    "service_required": "Haircut"
+}
